@@ -1,0 +1,27 @@
+{
+  "name": "still-here",
+  "version": "1.0.0",
+  "description": "Web App for Mental Health Help and Awareness",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aoliveras/still-here.git"
+  },
+  "author": "Adam Oliveras",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aoliveras/still-here/issues"
+  },
+  "homepage": "https://github.com/Aoliveras/still-here#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.7",
+    "morgan": "^1.9.1"
+  }
+}
