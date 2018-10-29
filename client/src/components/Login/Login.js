@@ -20,7 +20,7 @@ class Login extends Component {
         this.setState({ email: "", password: "" });
         if (user) {
             this.props.onLoginSuccess();
-            this.props.history.push('/');
+            this.props.history.push('/profile');
         } else {
             //create invalid credentials message
         }

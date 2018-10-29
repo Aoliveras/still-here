@@ -6,6 +6,7 @@ import Chat from './components/Chat/Chat';
 import Blog from './components/Blog/Blog';
 import Help from './components/Help/Help';
 import Login from './components/Login/Login';
+import Profile from './components/Profile/Profile';
 import Logout from './components/Logout/Logout';
 import Signup from './components/Signup/Signup';
 import httpClient from './utilities/httpClient';
@@ -39,6 +40,7 @@ class App extends Component {
           <Route path="/login" render={(props) => {
             return <Login {...props} onLoginSuccess={onAuthSuccess} />
           }} />
+          <Route path="/profile" component={Profile} />
           <Route path="/logout" render={() => {
             return <Logout onLogout={onLogout}/>
           }} />
