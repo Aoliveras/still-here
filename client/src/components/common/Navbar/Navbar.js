@@ -4,29 +4,28 @@ import { Link } from 'react-router-dom';
 
 export default ({ currentUser }) => {
     return (
-        <nav className="ui pointing menu">
-            <div className="">
+        <div className="column">
+        <nav className="ui menu">
                 <Link className="item" to="/">stillHere.co</Link>
-                <Link className="item" to="#">Chat</Link>
-                <Link className="item" to="#">Blog</Link>
-                <Link className="item" to="#">Help Center</Link>
-            </div>
-            <div className="right menu">
+                <Link className="item" to="/chat">Chat</Link>
+                <Link className="item" to="/blog">Blog</Link>
+                <Link className="item" to="/help">Help Center</Link>
                 {currentUser
                     ? (
-                        <span>
+                        <div className="right menu">
                             <span className="item">{currentUser.name}</span>
-                            <Link className="item" to="#">Logout</Link>
-                        </span>
+                            <Link className="item" to="/logout">Logout</Link>
+                        </div>
                     )
                     : (
-                        <span>
-                        <Link className="item" to="#">Login</Link>
-                        <Link className="item" to="#">Signup</Link>
-                        </span>
+                        <div className="right menu">
+
+                        <Link className="item" to="/login">Login</Link>
+                        <Link className="item" to="/signup">Signup</Link>
+                        </div>
                     )
                 }
-            </div>
         </nav>
+        </div>
     )
 };

@@ -1,11 +1,13 @@
 import React from 'react';
 import Navbar from '../Navbar/Navbar';
 
-export default () => {
+export default ({ children, currentUser }) => {
     return (
         <div className="ui container">
-            <Navbar />
-            <h1>Layout Component online...</h1>
+            <Navbar currentUser={currentUser}/>
+            <div className="ui container">
+                { children }
+            </div>
         </div>
     )
 };
