@@ -12,12 +12,12 @@ HTML, CSS, JavaScript, React, Node.js, Express, MongoDB, Semantic UI, Sass, Axio
 
 # Wireframes
 
-![Splash] (https://i.imgur.com/dslzPi2.png)
-![Signup] (https://i.imgur.com/AZ3PYrb.png)
-![Login] (https://i.imgur.com/CnBb1Do.png)
-![Chat] (https://i.imgur.com/FFrtPNk.png)
-![Blog] (https://i.imgur.com/l5pBmHo.png)
-![Help] (https://i.imgur.com/N8MUx6e.png)
+![Splash](https://i.imgur.com/dslzPi2.png)
+![Signup](https://i.imgur.com/AZ3PYrb.png)
+![Login](https://i.imgur.com/CnBb1Do.png)
+![Chat](https://i.imgur.com/FFrtPNk.png)
+![Blog](https://i.imgur.com/l5pBmHo.png)
+![Help](https://i.imgur.com/N8MUx6e.png)
 
 # Screenshots
 

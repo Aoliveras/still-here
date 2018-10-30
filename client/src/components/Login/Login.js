@@ -32,7 +32,8 @@ class Login extends Component {
         return (
         <div className="ui center aligned container" style={{ marginTop: "45px" }}>
                 <h1>Log in.</h1>
-                <form onSubmit={handleSubmit} >
+                <form className='ui form' onSubmit={handleSubmit} >
+                <div className="field">
                     <label>Username: </label>
                     <input
                         type="text"
@@ -41,6 +42,8 @@ class Login extends Component {
                         onChange={handleChange}
                         value={email}
                         />
+                </div>
+                <div className="field">
                     <label>Password: </label>
                     <input
                         type="password"
@@ -49,7 +52,10 @@ class Login extends Component {
                         onChange={handleChange}
                         value={password}
                         />
-                    <input type="submit"/>
+                </div>
+                <div className="field">
+                    <input className='ui button' type="submit"/>
+                </div>
                 </form>
             </div>
         )

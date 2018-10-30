@@ -10,8 +10,10 @@ export default () => {
             When you need to share your story. <br/>
             When you need a little help from a friend. 
           </p>
-          <button className='ui button'>
-            <Link className="nav-link" to="/signup">Join us</Link>
+          <button class='ui fade animated button primary' role='button'>
+    <div class='visible content'>Come Join us</div>
+    <div class='hidden content'>We're here for you</div>
+            <Link className="nav-link" to="/signup"></Link>
           </button>
         </div>
         )
