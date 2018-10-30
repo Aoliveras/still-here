@@ -1,13 +1,16 @@
 const
     mongoose = require('mongoose'),
     bcrypt = require('bcrypt-nodejs'),
+    postSchema = require('./Post').schema,
+
     userSchema = new mongoose.Schema({
         userName: { type: String },
         email: { type: String, required: true, unique: true },
         password: { type: String, required: true },
         location: String,
-        lookingFor: String
-    })
+        lookingFor: String,
+        posts: [postSchema]
+    }, { timestamps: true })
 
 // adds a method to a user document object to create a hashed password
 userSchema.methods.generateHash = function(password) {

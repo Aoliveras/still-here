@@ -11,8 +11,8 @@ export default () => {
             When you need a little help from a friend. 
           </p>    
             <Link to="/signup" className="ui fade animated button primary">
-              <div class='visible content'>Come Join us</div>
-              <div class='hidden content'>We're here for you</div>
+              <div className='visible content'>Come Join us</div>
+              <div className='hidden content'>We're here for you</div>
             </Link>
         </div>
         )

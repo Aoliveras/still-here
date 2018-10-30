@@ -19,10 +19,9 @@ function verifyToken(req, res, next) {
     if (!token) return res.json({ success: false, message: "No Token Provided." });
     jwt.verify(token, JWT_SECRET, (err, decodedData) => {
         if (err) res.json({ success: false, message: "Invalid Token" });
-
-        User.findById(decodedData.id, (err, user) => {
+        User.findById(decodedData._id, (err, user) => {
             if (err) res.json({ success: false, message: "Invalid Token" });
-            req.user = user; //add the uesr to request object
+            req.user = user; //add the user to request object
             next(); // Proceed to the next piece of middleware, action.
         })
     })

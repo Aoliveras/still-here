@@ -34,7 +34,7 @@ class Login extends Component {
                 <h1>Log in.</h1>
                 <form className='ui form' onSubmit={handleSubmit} >
                 <div className="field">
-                    <label>Username: </label>
+                    <label>Email: </label>
                     <input
                         type="text"
                         name="email"

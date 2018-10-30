@@ -7,6 +7,7 @@ import Blog from './components/Blog/Blog';
 import Help from './components/Help/Help';
 import Login from './components/Login/Login';
 import Profile from './components/Profile/Profile';
+import EditProfile from './components/EditProfile/EditProfile';
 import Logout from './components/Logout/Logout';
 import Signup from './components/Signup/Signup';
 import httpClient from './utilities/httpClient';
@@ -38,16 +39,24 @@ class App extends Component {
           <Route path="/blog" component={Blog} />
           <Route path="/help" component={Help} />
           <Route path="/login" render={(props) => {
-            return <Login {...props} onLoginSuccess={onAuthSuccess} />
+            return <Login {...props}
+            onLoginSuccess={onAuthSuccess} />
           }} />
           <Route path="/profile" render={(props) => {
-            return <Profile {...props} currentUser={currentUser} />
+            return <Profile {...props}
+            currentUser={currentUser} />
+          }} />
+          <Route path="/editProfile" render={(props) => {
+            return <EditProfile {...props}
+            onEditSuccess={onAuthSuccess}
+            currentUser={currentUser} />
           }} />
           <Route path="/logout" render={() => {
             return <Logout onLogout={onLogout}/>
           }} />
           <Route path="/signup" render={(props) => {
-            return <Signup {...props} onSignupSuccess={onAuthSuccess} />
+            return <Signup {...props}
+            onSignupSuccess={onAuthSuccess} />
           }} />
         </Switch>
       </Layout>

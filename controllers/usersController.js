@@ -35,7 +35,7 @@ module.exports = {
 			Object.assign(user, req.body)
 			user.save((err, updatedUser) => {
 				if(err) return res.json({message: "ERROR", payload: null, code: err.code})
-				res.json({ message: "SUCCESS", payload: user })
+				res.json({ message: "SUCCESS", payload: updatedUser })
 			})
 		})
 	},
