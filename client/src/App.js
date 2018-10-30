@@ -40,7 +40,9 @@ class App extends Component {
           <Route path="/login" render={(props) => {
             return <Login {...props} onLoginSuccess={onAuthSuccess} />
           }} />
-          <Route path="/profile" component={Profile} />
+          <Route path="/profile" render={(props) => {
+            return <Profile {...props} currentUser={currentUser} />
+          }} />
           <Route path="/logout" render={() => {
             return <Logout onLogout={onLogout}/>
           }} />
