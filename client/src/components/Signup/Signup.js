@@ -18,9 +18,11 @@ class Signup extends Component {
     handleSubmit = async (e) => {
         e.preventDefault();
         let { userName, email, password, location, lookingFor } = this.state;
-        let user = await httpClient.authenticate({ userName, email, password, location, lookingFor }, "/api/users");
+        let credentials = { userName, email, password, location, lookingFor }
+        let user = await httpClient.authenticate(credentials, "/api/users", "POST");
         this.setState({ userName: "", email: "", password: "", location: "", lookingFor: "" });
         if (user) {
+            console.log(user)
             this.props.onSignupSuccess();
             this.props.history.push('/profile');
         }

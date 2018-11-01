@@ -10,6 +10,7 @@ import Profile from './components/Profile/Profile';
 import EditProfile from './components/EditProfile/EditProfile';
 import Logout from './components/Logout/Logout';
 import Signup from './components/Signup/Signup';
+import CreatePost from './components/CreatePost/CreatePost';
 import httpClient from './utilities/httpClient';
 import './App.css';
 
@@ -58,6 +59,10 @@ class App extends Component {
             return <Signup {...props}
             onSignupSuccess={onAuthSuccess} />
           }} />
+          <Route path="/createPost" render={(props) => {
+            return <CreatePost {...props}
+            currentUser={currentUser} />
+          }}/>
         </Switch>
       </Layout>
     );
