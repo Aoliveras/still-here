@@ -15,8 +15,8 @@ class Login extends Component {
     handleSubmit = async (e) => {
         e.preventDefault();
         let { email, password } = this.state;
-        // Send data
-        let user = await httpClient.authenticate({ email, password }, "/api/users/authenticate");
+        let credentials = { email, password };
+        let user = await httpClient.authenticateLogin(credentials, "/api/users/authenticate");
         this.setState({ email: "", password: "" });
         if (user) {
             this.props.onLoginSuccess();

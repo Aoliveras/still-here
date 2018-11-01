@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';//use redirect to send people away from the chatroom if they aren't currently logged in, look at Zac's example for help
 import Layout from './components/common/Layout/Layout';
 import Home from './components/Home/Home';
 import Chat from './components/Chat/Chat';
-import Blog from './components/Blog/Blog';
+// import Blog from './components/Blog/Blog';
 import Help from './components/Help/Help';
 import Login from './components/Login/Login';
 import Profile from './components/Profile/Profile';
 import EditProfile from './components/EditProfile/EditProfile';
+import DeleteProfile from './components/DeleteProfile/DeleteProfile';
 import Logout from './components/Logout/Logout';
 import Signup from './components/Signup/Signup';
 import CreatePost from './components/CreatePost/CreatePost';
@@ -37,7 +38,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/chat" component={Chat} />
-          <Route path="/blog" component={Blog} />
+          {/* <Route path="/blog" component={Blog} /> */}
           <Route path="/help" component={Help} />
           <Route path="/login" render={(props) => {
             return <Login {...props}
@@ -52,6 +53,11 @@ class App extends Component {
             onEditSuccess={onAuthSuccess}
             currentUser={currentUser} />
           }} />
+          <Route path="/deleteProfile" render={(props) => {
+            return <DeleteProfile {...props}
+            currentUser={currentUser}
+            onLogout={onLogout} />
+          }}/>
           <Route path="/logout" render={() => {
             return <Logout onLogout={onLogout}/>
           }} />

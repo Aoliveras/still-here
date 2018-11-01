@@ -15,8 +15,8 @@ module.exports = {
 	show: (req, res) => {
 		User.findById(req.params.id, (err, user) => {
 			if(err) return res.json({message: "ERROR", payload: null, code: err.code})
-			res.json({ message: "SUCCESS", payload: user })
-		})
+			const token = signToken(user);
+			res.json({ success: true, token });		})
 	},
 
 	// create a new user

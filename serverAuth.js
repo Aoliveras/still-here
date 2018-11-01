@@ -4,7 +4,7 @@ const
     { JWT_SECRET } = process.env;
 
 
-//function for creating tokesn
+//function for creating tokens
 function signToken(user) {
     const userData = user.toObject() // Convert user doc from mongo tinto basic JS Object
     delete userData.password; //removes password from json object because it's sensitive info

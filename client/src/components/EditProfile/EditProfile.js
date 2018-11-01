@@ -1,11 +1,9 @@
 import React, {Component} from 'react';
 import httpClient from '../../utilities/httpClient';
-import axios from 'axios'
 class EditProfile extends Component {
 
     constructor(props){
         super(props)
-        console.log("PROPS", props)
         let { userName, email, password, location, lookingFor } = props.currentUser
         this.state = {
             userName: userName || "",
@@ -23,16 +21,10 @@ class EditProfile extends Component {
     }
 
     handleSubmit = async (e) => {
-        //console.log(this.state);
-        console.log(this.props.currentUser._id)
-
         e.preventDefault();
         //hit my postman patch method for users
         let { userName, email, password, location, lookingFor } = this.state;
         let credentials = { userName, email, password, location, lookingFor }
-        console.log("credentials", credentials)
-        //   let res = await axios.patch(`/api/users/${this.props.currentUser._id}`, credentials)
-        //   console.log("res", res)
         let user = await httpClient.authenticate(credentials, `/api/users/${this.props.currentUser._id}`, "PATCH");
         this.setState({ userName: "", email: "", password: "", location: "", lookingFor: "" });
         console.log(user);

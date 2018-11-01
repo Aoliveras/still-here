@@ -17,10 +17,24 @@ httpClient.getToken = function(token) {
 // Getting the currentUser
 httpClient.getCurrentUser = function() {
     const token = this.getToken();
-    console.log(token);
+    //console.log(token);
     if (token) return jwtDecode(token);
     return null
 };
+
+httpClient.authenticateLogin = async function(credentials, url) {
+    // 'this' refers to the instance of axios instantiated above.
+    let res = await this({ method: "post", url, data: credentials });
+    // Grab the token from the data that's returned in the response.
+    const token = res.data.token;
+
+    if (token) {
+        this.defaults.headers.common.token = this.setToken(token);
+        return jwtDecode(token);
+    } else {
+        return false;
+    }
+}
 
 httpClient.authenticate = async function(credentials, url, method) {
     // 'this' refers to the instance of axios instantiated above.

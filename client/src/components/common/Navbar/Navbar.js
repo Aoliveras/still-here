@@ -8,7 +8,7 @@ export default ({ currentUser }) => {
         <nav className="ui menu">
                 <Link className="item" to="/">stillHere.co</Link>
                 <Link className="item" to="/chat">Chat</Link>
-                <Link className="item" to="/blog">Blog</Link>
+                {/* <Link className="item" to="/blog">Blog</Link> */}
                 <Link className="item" to="/help">Help Center</Link>
                 {currentUser
                     ? (

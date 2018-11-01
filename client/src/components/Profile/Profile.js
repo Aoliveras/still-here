@@ -9,6 +9,8 @@ export default ({ currentUser }) => {
                 <h3>Current Location: {currentUser.location}</h3>
                 <h3>Looking for: {currentUser.lookingFor}</h3>
                 <Link to='/editProfile' className="ui button primary">Edit Profile</Link>
+                <Link to='/deleteProfile' className="ui red button">Delete Profile</Link>
+                <Link to='/createPost' className="ui green button">Create a post</Link>
             </div>
             <div className="ui center aligned container" style={{ marginTop: "45px" }}>
                 {/* <div className="ui three column grid"> */}
