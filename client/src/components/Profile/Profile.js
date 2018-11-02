@@ -7,8 +7,7 @@ class Profile extends Component {
         super(props)
 
         this.state = {
-            user: null,
-            posts: []//hold posts in state and then pass a prop to post components??
+            user: null
         }
     }
 
@@ -22,12 +21,12 @@ class Profile extends Component {
         console.log(e.target);
     }
 
-    handleDelete = async (e) => {
+    handleDelete = async (e, id) => {
         e.preventDefault();
-        let id = e.target.id;
+        // let id = e.target.id;
         let res = await httpClient({ url: `posts/${id}`, method: "DELETE" })
         console.log(res);
-        //this.setState({ user: res.data.user });
+        this.setState({ user: res.data.user });
         //console.log(res);
         //this.props.onDeleteSuccess();
         //this.props.history.push('/profile');
@@ -35,8 +34,8 @@ class Profile extends Component {
 
     render() {
         let { user } = this.state;
-        // let {handleDelete, handleShow} = this;
-        //let {currentUser} = this.props;
+        let {handleDelete, handleShow} = this;
+        // let {currentUser} = this.props;
         if (!user) return <div></div>
     return (
         <div>
@@ -53,8 +52,8 @@ class Profile extends Component {
                 {/* <div className="column"> */}
                     {user.posts.length > 0
                     ? user.posts.map(p => {
-                        return <div className="column">
-                                    <div key={p._id} className='ui card' style={{ margin: "25px 25px 25px 0" }}>
+                        return <div key={p._id} className="column">
+                                    <div className='ui card' style={{ margin: "25px 25px 25px 0" }}>
                                     <div className='content'>
                                         <div className='header'>{p.title}</div>
                                     </div>
@@ -66,8 +65,8 @@ class Profile extends Component {
                                     <div className='extra content'>
 
                                         {/* <button  id={p._id} onClick={(e) => {handleShow(e)}} className="ui primary button">Show</button> */}
-                                        {/* <button id={p._id} onClick={handleDelete} className="ui red button">Delete</button> */}
-                                        <i aria-hidden='true' className='user icon' />{user.userName}
+                                        <button onClick={(e)=>handleDelete(e, p._id)} className="ui red button">Delete</button>
+                                        {/* <i aria-hidden='true' className='user icon' />{user.userName} */}
                                     </div>
                                 </div>
                             </div>

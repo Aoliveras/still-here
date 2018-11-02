@@ -52,7 +52,16 @@ module.exports = {
     delete: (req, res) => {
         Post.findByIdAndRemove(req.params.id, (err, deletedPost) => {
             if (err) return res.json({ success: false, err });
-            res.json({ success: true, payload: deletedPost });
+            console.log("DELETED POST")
+            //go into user.posts array and remove this post
+            User.findById(req.user._id, (err, user) => {
+                user.posts.id(deletedPost._id).remove();
+                user.save((err, user) => {
+                    console.log("USER", user)
+                    if (err) return res.json({ success: false })
+                    res.json({ success: true, user })
+                })
+            })
         })
     }
 }
