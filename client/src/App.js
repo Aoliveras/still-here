@@ -37,7 +37,10 @@ class App extends Component {
       <Layout currentUser={currentUser}>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/chat" component={Chat} />
+          <Route path="/chat" render={(props) => {
+            return <Chat {...props}
+              currentUser={currentUser} />
+              }}/>
           {/* <Route path="/blog" component={Blog} /> */}
           <Route path="/help" component={Help} />
           <Route path="/login" render={(props) => {
@@ -46,7 +49,8 @@ class App extends Component {
           }} />
           <Route path="/profile" render={(props) => {
             return <Profile {...props}
-            currentUser={currentUser} />
+            currentUser={currentUser}
+            onDeleteSuccess={onAuthSuccess} />
           }} />
           <Route path="/editProfile" render={(props) => {
             return <EditProfile {...props}
@@ -67,7 +71,8 @@ class App extends Component {
           }} />
           <Route path="/createPost" render={(props) => {
             return <CreatePost {...props}
-            currentUser={currentUser} />
+            currentUser={currentUser}
+            onPostSuccess={onAuthSuccess} />
           }}/>
         </Switch>
       </Layout>

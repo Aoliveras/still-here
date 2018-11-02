@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import axios from 'axios';
+import httpClient from '../../utilities/httpClient';
 
 class CreatePost extends Component {
     state = {
@@ -13,9 +13,17 @@ class CreatePost extends Component {
     }
 
     handleSubmit = async (e) => {
-        let { title, body } = this.state;
         e.preventDefault();
+        let { title, body } = this.state;
+        let credentials = { title, body };
 
+        let user = await httpClient({data: credentials, url: "/posts", method: "POST"});
+        this.setState({ title: "", body: "" });
+        if (user) {
+            //console.log(user)
+            this.props.onPostSuccess();
+            this.props.history.push('/profile')
+        }
     }
 
     render() {

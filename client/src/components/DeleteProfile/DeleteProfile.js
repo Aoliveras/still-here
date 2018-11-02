@@ -17,7 +17,7 @@ class DeleteProfile extends Component {
 
     return (
         <div className="ui aligned center container">
-            <h1>Are you sure you wan to delete profile? All information and posts will be lost without ability to bring them back.</h1>
+            <h1>Are you sure you want to delete your profile? All information and posts will be lost without ability to bring them back.</h1>
             <Link to='/profile' className="ui green button">No, Go back to profile!</Link>
             <form onSubmit={handleSubmit}>
                 <button className="ui red button">Yes, delete profile!</button>

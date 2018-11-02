@@ -6,11 +6,11 @@ const
 
 
 postsRouter.get('/', postsCtrl.index)
-postsRouter.get('/:id', postsCtrl.show)
 
 //protected routes
 postsRouter.use(verifyToken)
 postsRouter.post('/', postsCtrl.create)
+postsRouter.get('/:id', postsCtrl.show)
 postsRouter.patch('/:id', postsCtrl.update)
 postsRouter.delete('/:id', postsCtrl.delete)
 
