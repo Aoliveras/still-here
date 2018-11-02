@@ -35,7 +35,7 @@ class Profile extends Component {
 
     render() {
         let { user } = this.state;
-        let {handleDelete, handleShow} = this;
+        // let {handleDelete, handleShow} = this;
         //let {currentUser} = this.props;
         if (!user) return <div></div>
     return (

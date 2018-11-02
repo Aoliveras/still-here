@@ -2,10 +2,8 @@
   "name": "still-here",
   "version": "1.0.0",
   "description": "Web App for Mental Health Help and Awareness",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
-  },
+  "main": "server.js"
+  ,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Aoliveras/still-here.git"

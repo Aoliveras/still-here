@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';//use redirect to send people away from the chatroom if they aren't currently logged in, look at Zac's example for help
+import { Route, Switch } from 'react-router-dom';//use redirect to send people away from the chatroom if they aren't currently logged in, look at Zac's example for help
 import Layout from './components/common/Layout/Layout';
 import Home from './components/Home/Home';
 import Chat from './components/Chat/Chat';
