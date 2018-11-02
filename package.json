@@ -4,8 +4,7 @@
   "description": "Web App for Mental Health Help and Awareness",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "heroku-postbuild": "cd client && npm run build"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +25,10 @@
     "jwt-decode": "^2.2.0",
     "mongoose": "^5.3.7",
     "morgan": "^1.9.1"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "heroku-postbuild": "cd client && npm run build"
   },
   "engines": {
     "node": "10.8.0"
