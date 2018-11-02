@@ -4,8 +4,8 @@
   "description": "Web App for Mental Health Help and Awareness",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "node server.js",
+    "heroku-postbuild": "cd client && npm run build"
   },
   "repository": {
     "type": "git",
@@ -26,5 +26,8 @@
     "jwt-decode": "^2.2.0",
     "mongoose": "^5.3.7",
     "morgan": "^1.9.1"
+  },
+  "engines": {
+    "node": "10.8.0"
   }
 }

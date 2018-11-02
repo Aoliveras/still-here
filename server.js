@@ -8,6 +8,7 @@ const
     PORT = process.env.PORT || 3001,
     usersRoutes = require('./routes/users.js'),
     postsRoutes = require('./routes/posts.js')
+    const path = require('path');
 
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true }, (err) => {
     console.log(err || `Connected to MongoDB.`)
@@ -15,6 +16,7 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true }, (err) => {
 
 app.use(logger('dev'))
 app.use(express.json())
+app.use(express.static(path.join(__dirname, "client", "build")))
 
 app.get('/api', (req, res) => {
     res.json({ message: "API root." })
@@ -22,6 +24,10 @@ app.get('/api', (req, res) => {
 
 app.use('/api/users', usersRoutes)
 app.use('/posts', postsRoutes)
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
 
 app.listen(PORT, (err) => {
     console.log(err || `Server running on port ${PORT}.`)
