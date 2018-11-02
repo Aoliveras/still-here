@@ -32,28 +32,28 @@ class CreatePost extends Component {
         return(
             <div>
                 <div className="ui center aligned container" style={{ marginTop: "45px" }}>
-                    <h1>{currentUser.userName} Create a new post</h1>
+                    <h1>Ok, {currentUser.userName}. <br/> Let's create a new post.</h1>
                     <form className='ui form' onSubmit={handleSubmit} >
                         <div className="field">
                             <label>Title: </label>
                             <input
                                 type="text"
                                 name="title"
-                                placeholder="Post name?"
+                                placeholder="What should we call this?"
                                 onChange={handleChange}
                             />
                         </div>
                         <div className="field">
                             <label>Body: </label>
-                            <input
-                                type="text"
+                            <textarea
+                                type="text-area"
                                 name="body"
-                                placeholder="JohnnyGreenwood@abc123.com"
+                                placeholder="What's on your mind?"
                                 onChange={handleChange}
                             />
                         </div>
                         <div className="field">
-                            <input className='ui button' type="submit"/>
+                            <input className='ui primary button' type="submit"/>
                         </div>
                         </form>
                 </div>
