@@ -7,7 +7,8 @@ class Profile extends Component {
         super(props)
 
         this.state = {
-            user: null
+            user: null,
+            state: null //set with handleShow and then send down as prop to show on ShowProfile component???
         }
     }
 
@@ -16,20 +17,18 @@ class Profile extends Component {
         this.setState({ user: res.data.user });
     }
 
-    handleShow = (e) => {
-        e.preventDefault();
-        console.log(e.target);
-    }
+    // handleShow = async (e, id) => {
+    //     e.preventDefault();
+    //     // console.log(e.target);
+    //     let res = await httpClient({ url: `posts/${id}`, method: "GET" })
+    //     console.log(res);
+    // }
 
     handleDelete = async (e, id) => {
         e.preventDefault();
-        // let id = e.target.id;
         let res = await httpClient({ url: `posts/${id}`, method: "DELETE" })
         console.log(res);
         this.setState({ user: res.data.user });
-        //console.log(res);
-        //this.props.onDeleteSuccess();
-        //this.props.history.push('/profile');
     }
 
     render() {
@@ -64,7 +63,7 @@ class Profile extends Component {
                                     </div>
                                     <div className='extra content'>
 
-                                        {/* <button  id={p._id} onClick={(e) => {handleShow(e)}} className="ui primary button">Show</button> */}
+                                        <Link to={`/showPost/${p._id}`}className="ui primary button">Show</Link>
                                         <button onClick={(e)=>handleDelete(e, p._id)} className="ui red button">Delete</button>
                                         {/* <i aria-hidden='true' className='user icon' />{user.userName} */}
                                     </div>

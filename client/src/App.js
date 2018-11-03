@@ -12,6 +12,7 @@ import DeleteProfile from './components/DeleteProfile/DeleteProfile';
 import Logout from './components/Logout/Logout';
 import Signup from './components/Signup/Signup';
 import CreatePost from './components/CreatePost/CreatePost';
+import ShowPost from './components/ShowPost/ShowPost';
 import httpClient from './utilities/httpClient';
 import './App.css';
 
@@ -73,6 +74,10 @@ class App extends Component {
             return <CreatePost {...props}
             currentUser={currentUser}
             onPostSuccess={onAuthSuccess} />
+          }}/>
+          <Route path="/showPost/:id" render={(props) => {
+            return <ShowPost {...props}
+            currentUser={currentUser}/>
           }}/>
         </Switch>
       </Layout>

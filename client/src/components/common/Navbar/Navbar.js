@@ -13,6 +13,7 @@ export default ({ currentUser }) => {
                     ? (
                         <div className="right menu">
                             <Link className="item" to="/chat">Chat</Link>
+                            {/* <Menu.item as={Link} to></Menu.item> */}
                             <Link className="item" to="/profile">{currentUser.userName}</Link>
                             <Link className="item" to="/logout">Logout</Link>
                         </div>
