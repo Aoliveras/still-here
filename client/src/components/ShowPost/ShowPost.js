@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import httpClient from '../../utilities/httpClient';
-//import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 class ShowPost extends Component {
@@ -24,8 +24,15 @@ class ShowPost extends Component {
         if (!post) return <div></div>
         return (
             <div className="ui center aligned container" style={{ marginTop: "45px" }}>
-                <h1>{post.title}</h1>
-                <h2>{post.body}</h2>
+                <h1>Your Post</h1>
+                <hr/>
+                <div className="ui container" style={{ border: "1px solid black", borderRadius: "25px", marginTop: "45px", padding: "25px" }}>
+                    <h2>"{post.title}"</h2>
+                    <hr/>
+                    <p style={{ fontSize: "20px" }}>{post.body}</p>
+                    <hr/>
+                    <Link to="/profile" className="ui primary button" style={{ marginTop: "25px" }}>Back to Profile</Link>
+                </div>
             </div>
         )
     }
