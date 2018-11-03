@@ -3,13 +3,6 @@ import httpClient from '../../utilities/httpClient';
 //import { Link } from 'react-router-dom';
 
 
-//make stateful
-
-//define state var of post to null
-
-//use component did mount 
-    //fetch post using httpclient
-
 class ShowPost extends Component {
 
     state = {
@@ -20,7 +13,6 @@ class ShowPost extends Component {
         let { id } = this.props.match.params;
         let res = await httpClient({ url: `/posts/${id}`, method: "GET" });
         // console.log(res);
-        debugger
         this.setState({ post: res.data.payload });
 
 
@@ -31,8 +23,9 @@ class ShowPost extends Component {
         let { post } = this.state;
         if (!post) return <div></div>
         return (
-            <div className="ui center aligned container">
+            <div className="ui center aligned container" style={{ marginTop: "45px" }}>
                 <h1>{post.title}</h1>
+                <h2>{post.body}</h2>
             </div>
         )
     }
