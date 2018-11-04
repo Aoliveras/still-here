@@ -30,34 +30,43 @@ class Login extends Component {
         let { email, password } = this.state;
         let { handleChange, handleSubmit } = this;
         return (
-        <div className="ui center aligned container" style={{ marginTop: "45px" }}>
-                <h1>Log in.</h1>
-                <form className='ui form' onSubmit={handleSubmit} >
-                <div className="field">
-                    <label>Email: </label>
-                    <input
-                        type="text"
-                        name="email"
-                        placeholder="JohnnyGreenwood@gmail.com"
-                        onChange={handleChange}
-                        value={email}
-                        />
+            <div>
+                <div className="ui center aligned container" style={{ marginTop: "45px" }}>
+                        <h1 style={{ fontSize: "45px" }}>Log in</h1>
                 </div>
-                <div className="field">
-                    <label>Password: </label>
-                    <input
-                        type="password"
-                        name="password"
-                        placeholder="Secret..."
-                        onChange={handleChange}
-                        value={password}
-                        />
+                <div className="ui container text">
+                    <form className='ui form' onSubmit={handleSubmit} style={{ marginTop: "65px" }}>
+                    <div className="field">
+                        <label>Email: </label>
+                        <input
+                            type="text"
+                            name="email"
+                            placeholder="JohnnyGreenwood@gmail.com"
+                            onChange={handleChange}
+                            value={email}
+                            />
+                    </div>
+                    <div className="field">
+                        <label>Password: </label>
+                        <input
+                            type="password"
+                            name="password"
+                            placeholder="Secret..."
+                            onChange={handleChange}
+                            value={password}
+                            />
+                    </div>
+                    <div className="ui center aligned container">
+                    <div className="field">
+                        <button className='ui fade animated primary button' type="submit">
+                            <div className='visible content'>Submit</div>
+                            <div className='hidden content'>Come on in</div>
+                        </button>
+                    </div>
+                    </div>
+                    </form>
                 </div>
-                <div className="field">
-                    <input className='ui button' type="submit"/>
-                </div>
-                </form>
-            </div>
+            </div>  
         )
     }
 };

@@ -34,7 +34,9 @@ class Signup extends Component {
         return(
             <div>
                 <div className="ui center aligned container" style={{ marginTop: "45px" }}>
-                    <h1>Sign up.</h1>
+                    <h1 className="center aligned" style={{ fontSize: "45px" }}>Sign up</h1>
+                </div>
+                <div className="ui container text" style={{ marginTop: "45px" }}>
                     <form className='ui form' onSubmit={handleSubmit} >
                         <div className="field">
                             <label>Name: </label>
@@ -68,7 +70,7 @@ class Signup extends Component {
                         </div>
                         <div className="field">
                             <label>Location:</label>
-                            <input 
+                            <input
                                 type="text"
                                 name="location"
                                 placeholder="What city are you in?"
@@ -78,7 +80,7 @@ class Signup extends Component {
                         </div>
                         <div className="field">
                             <label>Services:</label>
-                            <input 
+                            <input
                                 type="text"
                                 name="lookingFor"
                                 placeholder="What are you looking for?"
@@ -86,8 +88,13 @@ class Signup extends Component {
                                 value={lookingFor}
                             />
                         </div>
-                        <div className="field">
-                            <input className='ui button' type="submit"/>
+                        <div className="ui center aligned container">
+                            <div className="field">
+                                <button className='ui fade animated teal button' type="submit">
+                                    <div className='visible content'>Let's get started</div>
+                                    <div className='hidden content'>Submit</div>
+                                </button>
+                            </div>
                         </div>
                         </form>
                 </div>

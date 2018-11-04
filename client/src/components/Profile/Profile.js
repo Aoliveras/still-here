@@ -51,7 +51,7 @@ class Profile extends Component {
                 {/* <div className="column"> */}
                     {user.posts.length > 0
                     ? user.posts.map(p => {
-                        return <div key={p._id} className="column">
+                        return <div key={p._id} className="ui container">
                                     <div className='ui card' style={{ margin: "25px 25px 25px 0" }}>
                                     <div className='content'>
                                         <div className='header'>{p.title}</div>
