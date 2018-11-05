@@ -25,7 +25,7 @@ class ShowPost extends Component {
         // let postDate = post.createdAt.to_date;
         if (!post) return <div></div>
         return (
-            <div className="ui center aligned container text" style={{ marginTop: "45px" }}>
+            <div className="ui center aligned container text" style={{ marginTop: "45px", marginBottom: "100px" }}>
                 <div className="ui card fluid">
                     <div className="content">
                         <div className="header">

@@ -17,7 +17,7 @@ export default () => {
           <h2>
             When you need to share your story.
           </h2>
-            <Link to="/login" className="ui fade animated button primary" style={{ marginTop: "45px", marginBottom: "15px" }}>
+            <Link to="/login" className="ui fade animated inverted primary button" style={{ marginTop: "45px", marginBottom: "15px" }}>
               <div className='visible content'>Existing User Login</div>
               <div className='hidden content'>We missed you</div>
             </Link>

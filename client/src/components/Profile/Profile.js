@@ -32,7 +32,15 @@ class Profile extends Component {
     return (
         <div>
             <div className="ui center aligned segment raised" style={{ marginTop: "45px", padding: "25px", border: "1px solid lightgrey", borderRadius: "5px" }}>
-                <h1>{user.userName}'s profile</h1>
+                <div className="ui container text">
+                <div className="ui segment">
+                <div className="ui teal segment stacked">                
+                    <i className='ui huge user icon'></i>
+                    <h1>{user.userName}'s profile</h1>
+
+                </div>
+                </div>
+                </div>
                 <h3>Current Location: {user.location}</h3>
                 <h3>Looking for: {user.lookingFor}</h3>
                 <div className="ui section divider"></div>
