@@ -8,15 +8,15 @@ export default () => {
       <div className="ui segment stacked">
           <div className="ui container content" style={{ padding: "25px" }}>
           <div className='ui huge header' style={{ marginTop: "25px", fontSize: "65px" }}>Still Here.</div>
-          <h2 style={{ fontSize: "25px", marginTop: "45px" }}>
+          <h1 style={{ fontSize: "35px", marginTop: "45px" }}>
             When you need someone who understands.
-          </h2>
-          <h2>
+          </h1>
+          <h1 style={{ fontSize: "35px"}}>
             When you need a little help from a friend.
-            </h2>
-          <h2>
+            </h1>
+          <h1 style={{ fontSize: "35px"}}>
             When you need to share your story.
-          </h2>
+          </h1>
             <Link to="/login" className="ui fade animated inverted primary button" style={{ marginTop: "45px", marginBottom: "15px" }}>
               <div className='visible content'>Existing User Login</div>
               <div className='hidden content'>We missed you</div>

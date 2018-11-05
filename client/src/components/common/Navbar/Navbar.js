@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default ({ currentUser }) => {
     return (
         <div className="column">
-        <nav className="ui inverted teal menu">
+        <nav className="ui inverted teal huge menu">
                 <Link className="item" to="/">stillhere.co</Link>
                 {/* <Link className="item" to="/blog">Blog</Link> */}
                 <Link className="teal item" to="/help">Help Center</Link>
