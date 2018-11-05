@@ -4,7 +4,10 @@ stillhere.co is a web app made for those of us with mental health troubles. It i
 
 # Technologies
 
-HTML, CSS, JavaScript, React, Node.js, Express, MongoDB, Semantic UI, Sass, Axios, Morgan, Dotenv, JWT, Gliffy, Gravit Designer, Heroku, Trello
+HTML, CSS, JavaScript, React, Node.js, Express, MongoDB, Semantic UI, Axios, Morgan, Dotenv, JWT, Gliffy, Gravit Designer, Heroku, Trello
+
+(implemented later)
+socket.io
 
 [heroku link] ()
 
@@ -31,6 +34,8 @@ HTML, CSS, JavaScript, React, Node.js, Express, MongoDB, Semantic UI, Sass, Axio
 
 # Next Steps
 
+Implementing the CHat room feature with socket.io
+
 Reaching out to non-profits in the area to get more information and start creating traffic through page-links, social outreach, etc.
 
 Look into extra security for site as to keep out bully's and unwanted users from the site, keep user information very secure, I wouldn't want to jeopardize anybody's information let alone that of individuals who are having mental health issues. 
@@ -38,7 +43,4 @@ Look into extra security for site as to keep out bully's and unwanted users from
 Connect the site to twitter and give users the option to post directly to twitter when they would like their blog posts to be shared further. 
 
 Make it possible for users to upload photos for their profile or blog posts with instagram, flickr, drag and drop from their computer, etc. 
-
-
-
 
