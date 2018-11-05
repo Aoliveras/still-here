@@ -2,6 +2,10 @@
 
 stillhere.co is a web app made for those of us with mental health troubles. It is a chat room, a blog creator and a help finder for individuals who need a bit of support. 
 
+# Install and Run
+
+clone repository from github and then open 3 terminal windows. One for MongoDB (be sure to run "mongod" in the parent folder "still-here"), one for the backend server also in parent folder. "npm start"
+
 # Technologies
 
 HTML, CSS, JavaScript, React, Node.js, Express, MongoDB, Semantic UI, Axios, Morgan, Dotenv, JWT, Gliffy, Gravit Designer, Heroku, Trello
