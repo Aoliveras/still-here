@@ -16,12 +16,15 @@ class DeleteProfile extends Component {
         let {handleSubmit} = this;
 
     return (
-        <div className="ui aligned center container">
-            <h1>Are you sure you want to delete your profile? All information and posts will be lost without ability to bring them back.</h1>
+        <div className='ui center aligned container text' style={{ marginTop: "150px" }}>
+        <div className="ui red segment piled">
+            <h1>Are you sure you want to delete your profile? <br/> All information and posts will be lost without ability to bring them back.</h1>
             <Link to='/profile' className="ui green button">No, Go back to profile!</Link>
+            <div className="ui horizontal divider">Or</div>
             <form onSubmit={handleSubmit}>
                 <button className="ui red button">Yes, delete profile!</button>
             </form>
+        </div>
         </div>
         )
     }
