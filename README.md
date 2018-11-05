@@ -21,13 +21,12 @@ HTML, CSS, JavaScript, React, Node.js, Express, MongoDB, Semantic UI, Sass, Axio
 
 # Screenshots
 
-![Splash] ()
-![Signup] ()
-![Login] ()
-![Chat] ()
-![Blog] ()
-![Help] ()
-![APIJsonReturn] ()
+![Splash] (https://i.imgur.com/NjD1xX3.png)
+![Signup] (https://i.imgur.com/9NNTRFO.png)
+![Login] (https://i.imgur.com/dxlfJIB.png)
+![Profile] (https://i.imgur.com/n8r99o8.png)
+![Help] (https://i.imgur.com/hiw6xXc.png)
+![Chat] (https://i.imgur.com/WZ4gBG9.png)
 
 
 # Next Steps
