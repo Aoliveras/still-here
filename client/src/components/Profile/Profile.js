@@ -44,8 +44,8 @@ class Profile extends Component {
                 <h3>Current Location: {user.location}</h3>
                 <h3>Looking for: {user.lookingFor}</h3>
                 <div className="ui section divider"></div>
-                <Link to='/createPost' className="ui green  button">Create a post</Link>
-                <Link to='/editProfile' className="ui teal  button">Edit Profile</Link>
+                <Link to='/createPost' className="ui teal button">Create a post</Link>
+                <Link to='/editProfile' className="ui yellow button">Edit Profile</Link>
                 <Link to='/deleteProfile' className="ui red inverted tertiary button">Delete Profile</Link>
             </div>
             <div className="ui center aligned container" style={{ marginTop: "45px" }}>

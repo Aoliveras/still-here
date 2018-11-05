@@ -34,7 +34,7 @@ class Login extends Component {
                 <div className="ui center aligned container" style={{ marginTop: "45px" }}>
                         <h1 style={{ fontSize: "45px", marginBottom: "45px" }}>Log in</h1>
                 </div>
-                <div className="ui segment stacked">
+                <div className="ui teal segment stacked">
                 <div className="ui container text">
                     <form className='ui form' onSubmit={handleSubmit} style={{ marginTop: "65px" }}>
                     <div className="field">

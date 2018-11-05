@@ -93,8 +93,11 @@ class EditProfile extends Component {
                             />
                         </div>
                         <div className="field">
-                            <input className='ui button' type="submit"/>
-                        </div>
+                            <button className='ui fade animated teal button' type="submit">
+                            <div className='visible content'>Submit Edit</div>
+                            <div className='hidden content'><i className='arrow left icon'></i> </div>
+                            </button>
+                        </div>                            
                         </form>
                 </div>
             </div>

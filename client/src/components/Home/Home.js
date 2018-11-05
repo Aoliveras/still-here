@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 export default () => {
     return (
         <div className="ui center aligned container" style={{ marginTop: "100px" }}>
-      <div className="ui segment stacked">
+      <div className="ui teal segment stacked">
           <div className="ui container content" style={{ padding: "25px" }}>
           <div className='ui huge header' style={{ marginTop: "25px", fontSize: "65px" }}>Still Here.</div>
           <h1 style={{ fontSize: "35px", marginTop: "45px" }}>

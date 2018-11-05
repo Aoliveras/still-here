@@ -36,7 +36,7 @@ class Signup extends Component {
                 <div className="ui center aligned container" style={{ marginTop: "45px" }}>
                     <h1 className="center aligned" style={{ fontSize: "45px", marginBottom: "45px" }}>Sign up</h1>
                 </div>
-                <div className="ui segment stacked">
+                <div className="ui teal segment stacked">
                 <div className="ui container text" style={{ marginTop: "45px" }}>
                     <form className='ui form' onSubmit={handleSubmit} >
                         <div className="field">
