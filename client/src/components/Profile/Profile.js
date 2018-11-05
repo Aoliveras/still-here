@@ -8,7 +8,6 @@ class Profile extends Component {
 
         this.state = {
             user: null,
-            state: null //set with handleShow and then send down as prop to show on ShowProfile component???
         }
     }
 
@@ -17,12 +16,6 @@ class Profile extends Component {
         this.setState({ user: res.data.user });
     }
 
-    // handleShow = async (e, id) => {
-    //     e.preventDefault();
-    //     // console.log(e.target);
-    //     let res = await httpClient({ url: `posts/${id}`, method: "GET" })
-    //     console.log(res);
-    // }
 
     handleDelete = async (e, id) => {
         e.preventDefault();
@@ -33,18 +26,19 @@ class Profile extends Component {
 
     render() {
         let { user } = this.state;
-        let {handleDelete, handleShow} = this;
+        let {handleDelete} = this;
         // let {currentUser} = this.props;
         if (!user) return <div></div>
     return (
         <div>
-            <div className="ui center aligned container" style={{ marginTop: "45px" }}>
+            <div className="ui center aligned segment raised" style={{ marginTop: "45px", padding: "25px", border: "1px solid lightgrey", borderRadius: "5px" }}>
                 <h1>{user.userName}'s profile</h1>
                 <h3>Current Location: {user.location}</h3>
                 <h3>Looking for: {user.lookingFor}</h3>
-                <Link to='/createPost' className="ui green button">Create a post</Link>
-                <Link to='/editProfile' className="ui button primary">Edit Profile</Link>
-                <Link to='/deleteProfile' className="ui red button">Delete Profile</Link>
+                <div className="ui section divider"></div>
+                <Link to='/createPost' className="ui green  button">Create a post</Link>
+                <Link to='/editProfile' className="ui teal  button">Edit Profile</Link>
+                <Link to='/deleteProfile' className="ui red inverted tertiary button">Delete Profile</Link>
             </div>
             <div className="ui center aligned container" style={{ marginTop: "45px" }}>
                 <div className="ui three column grid">
@@ -53,28 +47,28 @@ class Profile extends Component {
                     ? user.posts.map(p => {
                         return <div key={p._id} className="ui column">
                                     <div className='ui card' style={{ margin: "25px 25px 25px 0" }}>
-                                    <div className='content'>
-                                        <div className='header'>{p.title}</div>
-                                    </div>
-                                    <div className='content'>
-                                        <div className='description'>
-                                            {p.body}
+                                        <div className='content'>
+                                            <div className='header'>{p.title}</div>
+                                        </div>
+                                        <div className='content'>
+                                            <div className='description'>
+                                                {p.body}
+                                            </div>
+                                        </div>
+                                        <div className='extra content'>
+
+                                            <Link to={`/showPost/${p._id}`}className="ui teal button">Show</Link>
+                                            <button onClick={(e)=>handleDelete(e, p._id)} className="ui red inverted tertiary button">Delete</button>
+                                            {/* <i aria-hidden='true' className='user icon' />{user.userName} */}
                                         </div>
                                     </div>
-                                    <div className='extra content'>
-
-                                        <Link to={`/showPost/${p._id}`}className="ui primary button">Show</Link>
-                                        <button onClick={(e)=>handleDelete(e, p._id)} className="ui red button">Delete</button>
-                                        {/* <i aria-hidden='true' className='user icon' />{user.userName} */}
-                                    </div>
                                 </div>
+                                })
+                                : <h1>Nothing to see here...</h1>}
                             </div>
-                        })
-                        : <h1>Nothing to see here...</h1>}
                 </div>
             </div>
-        </div>
-        )
+            )
     }
 }
 

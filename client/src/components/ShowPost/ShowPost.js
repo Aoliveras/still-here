@@ -21,17 +21,28 @@ class ShowPost extends Component {
 
     render() {
         let { post } = this.state;
+        console.log(post)
+        // let postDate = post.createdAt.to_date;
         if (!post) return <div></div>
         return (
-            <div className="ui center aligned container" style={{ marginTop: "45px" }}>
-                <h1>Your Post</h1>
-                <hr/>
-                <div className="ui container" style={{ border: "1px solid black", borderRadius: "25px", marginTop: "45px", padding: "25px" }}>
-                    <h2>"{post.title}"</h2>
-                    <hr/>
-                    <p style={{ fontSize: "20px" }}>{post.body}</p>
-                    <hr/>
-                    <Link to="/profile" className="ui primary button" style={{ marginTop: "25px" }}>Back to Profile</Link>
+            <div className="ui center aligned container text" style={{ marginTop: "45px" }}>
+                <div className="ui card fluid">
+                    <div className="content">
+                        <div className="header">
+                            <h1>"{post.title}"</h1>
+                        </div>
+                    </div>
+                    <div className="content">
+                        <p style={{ fontSize: "20px" }}>{post.body}</p>
+                    </div>
+                    <div className='extra content'>
+                        <i aria-hidden='true' className='calendar large icon' />Created on: {post.createdAt.slice(0,10)}
+                        <div className="ui divider"></div>
+                        <Link to='/profile' className="ui fade animated teal button">
+                            <div className='visible content'>Back to Profile</div>
+                            <div className='hidden content'><i className='arrow left icon'></i> </div>
+                        </Link>
+                    </div>
                 </div>
             </div>
         )

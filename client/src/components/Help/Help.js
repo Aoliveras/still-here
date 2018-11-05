@@ -4,14 +4,15 @@ export default () => {
     return (
         <div>
             <div className="ui center aligned container text" style={{ margin: "65px 0 45px 0" }}>
-                <div className="content" style={{ padding: "25px", border: "1px solid lightgrey", borderRadius: "20px" }}>
+                <div className="ui teal segment stacked" style={{ padding: "25px", border: "1px solid lightgrey" }}>
                     <h1 style={{ fontSize: "45px"}}>Here to help.</h1>
-                    <hr/>
+                    <div className="ui divider lightgrey"></div>
                     <h2>Finding help can be hard, let us make it a bit easier for you.</h2>
                     <h2>Below are links to even more helpful resources.</h2>
                 </div>
             </div>
-            <div className="ui container text" style={{ marginTop: "85px" }}>
+            <div className="ui container text">
+            <div className="ui container text" style={{ marginTop: "55px", marginBottom: "100px" }}>
                 <div className="ui center aligned container">
                     <h2 style={{ fontSize: "35px", textDecoration: "underline" }}>Helpful Websites</h2>
                 </div>
@@ -28,6 +29,8 @@ export default () => {
                 <p>(FREE support and education for families and individuals seeking help for a wide range of mental illness)</p>
             </div>
 
+            <div className="ui horizontal divider lightgrey">Or</div>
+
             <div className="ui container text" style={{ marginTop: "55px", marginBottom: "100px" }}>
                 <div className="ui center aligned container">
                     <h2 style={{ fontSize: "35px", textDecoration: "underline" }}>Helpful Applications</h2>
@@ -42,6 +45,7 @@ export default () => {
                 <p>(Build skills for lasting happiness: Happify turns the latest innovations in the science of happiness into activities and games that help you lead a more fulfilling life.)</p>
                 <h2><a href="https://www.talkspace.com/">Talkspace</a></h2>
                 <p>(With Talkspace online therapy, anyone can get therapy without traveling to an office.)</p>
+            </div>
             </div>
         </div>
     )
